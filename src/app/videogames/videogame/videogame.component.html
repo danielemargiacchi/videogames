@@ -1,0 +1,32 @@
+<div class="sfondo">
+    <dialog open class="w-100 border-0 rounded p-3 bg-white">
+        <button class="btn btn-secondary rounded-pill mb-3" (click)="onCloseVideogame()">Indietro</button>
+        <div class="game-container container">
+            <div class="row">
+
+                <div class="info col-md-6">
+                    
+                    
+                    <h1 class="h2 text-dark">{{gameById?.titolo}}</h1>
+                    <h3 class="h5 mt-3">Descrizione: <span class="text-muted">{{gameById?.descrizione}}</span></h3>
+                    <h3 class="h5">Genere: <span class="text-muted">{{gameById?.genere}}</span></h3>
+                    <h3 class="h5">Data di rilascio: <span class="text-muted">{{gameById?.dataRilascio}}</span></h3>
+                    <h3 class="h5">Prezzo: <span class="text-muted">{{gameById?.prezzo}}</span></h3>
+                    <h3 class="h5">
+                            @if (gameById?.disponibilita) {
+                               <p class="text-success"> Disponibilità immediata</p>
+                            }@else {
+                               <p class="text-warning"> Disponibile su ordinazione</p>
+                               <button class="btn btn-warning rounded-pill" >Ordina</button>
+                            }
+                    </h3>
+                </div>
+                <div class="cover-img col-md-6">
+                    <img [src]="gameById?.coverImage" [alt]="gameById?.titolo">
+                </div>
+            </div>
+        </div>
+    </dialog>
+</div>
+
+ 

@@ -1,0 +1,47 @@
+
+
+@if (isSelectedVideogame) {
+    <app-videogame (close) = "onClosedVideogame()" [videogameId] = "selectedVideogame"></app-videogame>
+    
+}
+<div class="container">
+    <h2>Videogames List</h2>
+
+
+
+<!-- videogames list -->
+<ul class="list-group list-group-flush">
+    @for (game of allVideogames; track $index) {
+        <li (click)="onSelectVideogame(game.id)" class="list-group-item videogame-li">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>{{game.titolo}}</h3>
+                        <span>{{game.genere}}</span>
+                        <span>
+                            @if (game.disponibilita) {
+                                Disponibile
+                            }@else {
+                                Non disponibile
+                            }
+                        </span> 
+                        <span>
+                            {{game.prezzo}}
+                        </span>  
+    
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="cover-img" >
+                            <img [src]="game.coverImage" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </li>
+    }
+</ul>
+
+</div>

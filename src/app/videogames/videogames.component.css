@@ -1,0 +1,28 @@
+.videogame-li:hover{
+    background-color: azure;
+    cursor: pointer;
+}
+
+
+.videogame-card{
+    display: flex;
+    flex-direction: column;
+}
+
+.videogame-header{
+    display: flex;
+    text-align: start;
+    justify-content: space-around;
+}
+
+
+.cover-img{
+    width: 200px;
+    height: 100px;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.cover-img img{
+    width: 100%;
+}
