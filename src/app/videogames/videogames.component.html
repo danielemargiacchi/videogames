@@ -1,7 +1,7 @@
 
 
 @if (isSelectedVideogame) {
-    <app-videogame (close) = "onClosedVideogame()" [videogameId] = "selectedVideogame"></app-videogame>
+    <app-prenota (close) = "onClosedVideogame()" [videogameId] = "selectedVideogame"></app-prenota>
     
 }
 <div class="container">
@@ -12,10 +12,10 @@
 <!-- videogames list -->
 <ul class="list-group list-group-flush">
     @for (game of allVideogames; track $index) {
-        <li (click)="onSelectVideogame(game.id)" class="list-group-item videogame-li">
+        <li class="list-group-item videogame-li">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <h3>{{game.titolo}}</h3>
                         <span>{{game.genere}}</span>
                         <span>
@@ -24,11 +24,20 @@
                             }@else {
                                 Non disponibile
                             }
-                        </span> 
+                        </span>
+
                         <span>
                             {{game.prezzo}}
                         </span>  
     
+                    </div>
+                    <div class="col-md-2">
+                            @if (game.disponibilita) {
+                                <button type="button" class="btn btn-success rounded-pill">Acquista</button>
+                            }@else {
+                                <button (click)="onPrenotaVideogame(game.id)" type="button" class="btn btn-warning rounded-pill">Prenota</button>
+                            }
+
                     </div>
                     <div class="col-md-4">
 

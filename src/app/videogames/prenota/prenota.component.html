@@ -1,0 +1,40 @@
+<div class="sfondo">
+    <dialog open class="border-0 rounded p-3">
+        <div class="game-container container">
+            <div class="row">
+                <div class="info col-md-6">
+                    <h1 class="h2 text-dark">{{gameById?.titolo}}</h1>
+                    <h3 class="h5">Prezzo: <span class="text-muted">{{gameById?.prezzo}}</span></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="w-100">
+                    <form [formGroup]="prenotaForm" (ngSubmit)="onSubmit()">
+                        
+                        <div class="mb-3">
+                            <label  for="nome" class="form-label">Nome</label>
+                            <input formControlName="nome"  type="text" name="nome" id="nome" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label  for="cognome" class="form-label">Cognome</label>
+                            <input formControlName="cognome"  type="text" name="cognome" id="cognome" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label  for="email" class="form-label">Email</label>
+                            <input formControlName="email"  type="email" name="email" id="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="indirizzo" class="form-label">Indirizzo</label>
+                            <input formControlName="indirizzo" type="text" name="indirizzo" id="indirizzo" class="form-control">
+                        </div>
+                        
+                        <button class="btn btn-secondary rounded-pill" (click)="onCloseVideogame()">Indietro</button>
+                        <button class="btn btn-warning rounded-pill">Prenota</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </dialog>
+</div>
+
+ 

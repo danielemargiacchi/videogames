@@ -18,7 +18,7 @@ export const VIDEOGAMES_LIST: Videogame[] = [
     genere: "GDR/Azione",
     dataRilascio: "2022-02-25",
     prezzo: "69.99€",
-    disponibilita: true,
+    disponibilita: false,
     coverImage: "/coverImages/elden.png"
   },
   {
@@ -48,7 +48,7 @@ export const VIDEOGAMES_LIST: Videogame[] = [
     genere: "Sandbox",
     dataRilascio: "2011-11-18",
     prezzo: "26.95€",
-    disponibilita: true,
+    disponibilita: false,
     coverImage: "/coverImages/minecraft.jpg"
   },
   {
@@ -68,7 +68,7 @@ export const VIDEOGAMES_LIST: Videogame[] = [
     genere: "Simulazione",
     dataRilascio: "2020-08-18",
     prezzo: "69.99€",
-    disponibilita: true,
+    disponibilita: false,
     coverImage: "/coverImages/flightsimulator.jpg"
   },
   {
